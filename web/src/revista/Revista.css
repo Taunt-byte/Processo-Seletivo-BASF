@@ -1,0 +1,17 @@
+/* Revista.css */
+.comic-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 30px; /* Espaçamento entre as HQs */
+    transition: transform 0.3s ease; /* Efeito de transição suave */
+  }
+  
+  .comic-card {
+    flex: 0 0 280px; /* Largura fixa das HQs */
+    transition: opacity 0.3s ease; /* Efeito de transição de opacidade */
+  }
+  
+  .comic-card:hover {
+    opacity: 0.7; /* Opacidade reduzida ao passar o mouse */
+  }
+
