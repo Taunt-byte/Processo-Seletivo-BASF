@@ -1,6 +1,5 @@
 "use client";
-
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 const publicKey = "6769f87e1fa3ac21db5b1430d6d7412c";
@@ -13,7 +12,11 @@ const hash = require("crypto")
 
 export default function Home() {
   const [characterName, setCharacterName] = useState("");
-  const [characterData, setCharacterData] = useState(null);
+  const [characterData, setCharacterData] = useState<{
+    name: string;
+    description: string;
+    thumbnail: string;
+  } | null>(null);
 
   const searchCharacter = async () => {
     try {

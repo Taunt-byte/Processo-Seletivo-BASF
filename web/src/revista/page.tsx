@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-import "./Revista.css"; // Importe o arquivo CSS
+import "./Revista.css";
 
 const publicKey = "6769f87e1fa3ac21db5b1430d6d7412c";
 const privateKey = "21938c6e0f7825e615535b7f1a8abe06d0ebb8f2";
-const timestamp = new Date().getTime().toString();
-const hash = require("crypto")
+const timestamp: string = new Date().getTime().toString();
+const hash: string = require("crypto")
   .createHash("md5")
   .update(timestamp + privateKey + publicKey)
   .digest("hex");
@@ -16,7 +16,6 @@ export default function Revista() {
   const [comics, setComics] = useState([]);
 
   useEffect(() => {
-    // Faz a solicitação à API da Marvel para obter informações sobre revistas
     const fetchComics = async () => {
       try {
         const response = await axios.get(
@@ -25,12 +24,10 @@ export default function Revista() {
 
         const comicsData = response.data.data.results;
 
-        // Filtra apenas as revistas com imagens
-        const comicsWithImages = comicsData.filter((comic) => {
+        const comicsWithImages = comicsData.filter((comic: any) => {
           return comic.thumbnail && comic.thumbnail.path && comic.thumbnail.extension;
         });
 
-        // Limita a exibição a apenas 4 revistas
         setComics(comicsWithImages.slice(0, 4));
       } catch (error) {
         console.error("Error fetching comic data:", error);
@@ -41,10 +38,10 @@ export default function Revista() {
   }, []);
 
   return (
-    <div id="revista"className="w-full max-w-screen-xl mx-auto py-8">
+    <div id="revista" className="w-full max-w-screen-xl mx-auto py-8">
       <h2 className="text-2xl font-semibold mb-4">New Marvel Comics</h2>
       <div className="comic-carousel flex flex-wrap justify-center">
-        {comics.map((comic) => (
+        {comics.map((comic: any) => (
           <div key={comic.id} className="comic-card w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6 p-2">
             <img
               src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
