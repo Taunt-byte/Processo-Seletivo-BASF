@@ -12,16 +12,16 @@ A aplicação faz uso das seguintes tecnologias e bibliotecas:
 
 - **Axios:** Axios é usado para fazer solicitações HTTP à API da Marvel, buscando informações sobre personagens e quadrinhos.
 
-- **Next:** 
+- **Next.js:** Next.js é uma estrutura de desenvolvimento web para React que oferece recursos como renderização do lado do servidor e geração de páginas estáticas, melhorando o desempenho e a experiência do usuário.
 
-- **Hospedagem:** A aplicação está hospedada em algum lugar para que você possa conferir uma demonstração ao vivo.
+- **Hospedagem:** A aplicação está hospedada em Vercel.
 
 ## Como Executar o Projeto
 
 Para executar este projeto localmente, siga as etapas abaixo:
 
 1. Clone este repositório para o seu ambiente de desenvolvimento.
-   
+
 2. Instale as dependências usando o npm ou yarn:
 
    ```shell
@@ -37,17 +37,17 @@ Para executar este projeto localmente, siga as etapas abaixo:
    ```shell
    npm run dev
    # ou
-   yarn start
+   yarn dev
    ```
 
 A aplicação estará disponível em http://localhost:3000.
 
 ## Demonstração ao Vivo
 
-Você pode acessar uma demonstração ao vivo desta aplicação em [URL de hospedagem](coloque-aqui-sua-url).
+Você pode acessar uma demonstração ao vivo desta aplicação em [URL de hospedagem](https://processo-seletivo-basf-i1sad2n2x-taunt-byte.vercel.app/).
 
 ## Conclusão
 
 Este projeto demonstra minha habilidade em desenvolver uma aplicação web moderna usando tecnologias populares. 
 
-Espero que esta aplicação atenda às expectativas e requisitos do processo seletivo da BASF.
+Espero que esta aplicação atenda às expectativas e requisitos do processo seletivo da BASF. Se tiver alguma dúvida ou precisar de mais informações, por favor, não hesite em entrar em contato.
